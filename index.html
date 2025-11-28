@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEETANJALI PAGARE | HR Business Partner Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Bebas+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Neo-Brutalist Palette: Black, Light Yellow, Pink/Purple */
+        :root {
+            --color-black: #000000;
+            --color-white: #FFFFFF;
+            --color-yellow: #FFED63; /* Primary Accent: Light Yellow */
+            --color-pink: #A020F0; /* Secondary Accent (Purple/Pink) */
+            --color-blue: #0074D9; /* Tertiary Accent */
+
+            /* Lighter Shades for Key Impact Boxes */
+            --impact-red-light: #FFCCBC; 
+            --impact-green-light: #B0FFB9;
+            --impact-blue-light: #A2D0FF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-white);
+            color: var(--color-black);
+            line-height: 1.6;
+            /* Finer Dotted Background Pattern */
+            background-image: radial-gradient(var(--color-black) 0.5px, transparent 0);
+            background-size: 10px 10px; /* Reduced spacing */
+            background-color: #f5f5f5;
+        }
+
+        /* Base Card Styling - Thick Black Border and Shadow */
+        .brutal-card {
+            border: 3px solid var(--color-black);
+            box-shadow: 6px 6px 0 0 var(--color-black);
+            transition: all 0.15s ease-out;
+            background-color: var(--color-white);
+            border-radius: 0; /* Sharp corners */
+        }
+        .brutal-card:hover {
+            box-shadow: 8px 8px 0 0 var(--color-black);
+            transform: translate(-1px, -1px);
+        }
+        
+        /* Headline Font - Used for name and major headers */
+        .headline-font {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Section Header - Bold bottom border */
+        .brutal-section-header {
+            border-bottom: 5px solid var(--color-black);
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+            font-size: 2.5rem; /* text-4xl */
+            line-height: 1.1;
+            font-weight: 900;
+            color: var(--color-black);
+        }
+
+        /* Experience Timeline - High Contrast Line */
+        .experience-item {
+            border-left: 4px dashed var(--color-blue);
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 0.3rem; 
+            width: 20px;
+            height: 20px;
+            background-color: var(--color-yellow); /* Uses light yellow */
+            border: 3px solid var(--color-black);
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        /* Pill Styling */
+        .pill {
+            padding: 4px 12px;
+            border: 2px solid var(--color-black);
+            font-weight: 600;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            box-shadow: 2px 2px 0 0 var(--color-black);
+        }
+
+        /* Custom Button Style */
+        .brutal-btn {
+            padding: 10px 20px;
+            border: 3px solid var(--color-black);
+            box-shadow: 4px 4px 0 0 var(--color-black);
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 0;
+            transition: all 0.1s;
+        }
+        .brutal-btn:hover {
+            box-shadow: 6px 6px 0 0 var(--color-black);
+            transform: translate(-1px, -1px);
+        }
+
+        /* Style overrides */
+        .text-blue { color: var(--color-blue); }
+        .bg-yellow { background-color: var(--color-yellow); }
+    </style>
+</head>
+<body class="p-4 md:p-10">
+
+    <div class="max-w-6xl mx-auto">
+
+        <!-- NAV BAR (Top Header) -->
+        <nav class="flex justify-between items-center mb-8 border-b-4 border-black pb-3">
+            <div class="bg-black text-white px-3 py-1 text-lg font-bold headline-font">HR BUSINESS PARTNER</div>
+            <div class="hidden md:flex space-x-6 text-sm font-semibold">
+                <a href="#summary" class="hover:underline text-blue">SUMMARY</a>
+                <a href="#full-experience" class="hover:underline text-blue">EXPERIENCE</a>
+                <a href="#ai-projects" class="hover:underline text-blue">PROJECTS</a>
+                <a href="#certifications" class="hover:underline text-blue">CERTIFICATIONS</a>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION (Matches Image Layout) -->
+        <header class="grid lg:grid-cols-3 gap-8 mb-12">
+            
+            <!-- Left Side: Name and Summary -->
+            <div class="lg:col-span-2 space-y-6">
+                <div class="text-7xl md:text-8xl font-black leading-none tracking-tighter">
+                    <span class="block">GEETANJALI</span>
+                    <!-- Split and colored last name as per image -->
+                    <span class="block relative" style="color: var(--color-yellow);">
+                        PAGARE
+                        <span class="absolute left-0 bottom-0 block w-full h-1/4 bg-blue opacity-50 z-[-1] transform translate-y-2"></span>
+                    </span>
+                </div>
+                
+                <!-- Summary Text -->
+                <p class="text-lg leading-relaxed border-l-4 pl-4" style="border-color: var(--color-blue);">
+                    Results-driven HR Business Partner with over 10 years of experience in shaping people strategy for diverse sectors including Product, Technology, Academics, Marketing, Finance, Content, Customer Success, and Offline Centres. I excel in employee relations, performance management, and organizational design, achieving significant improvements in employee engagement and attrition. My goal is to foster an inclusive culture and lead HR transformations to support business objectives.
+                </p>
+
+                <!-- Contact Buttons -->
+                <div class="flex space-x-4 pt-4">
+                    <a href="mailto:geetanjali.asinha@gmail.com" class="brutal-btn bg-blue text-white hover:bg-black">
+                        📧 CONTACT ME
+                    </a>
+                    <a href="https://www.linkedin.com/in/geetanjali-pagare-199ba8a3/" target="_blank" class="brutal-btn bg-yellow text-black hover:bg-black hover:text-white">
+                        🔗 LINKEDIN
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Key Profile Card (Light Yellow/Pink/Purple) -->
+            <div class="brutal-card bg-yellow p-6 relative overflow-hidden" style="box-shadow: 10px 10px 0 0 var(--color-pink); border-right: 5px solid var(--color-pink); border-bottom: 5px solid var(--color-pink);">
+                <div class="flex flex-col items-center text-center">
+                    
+                    <!-- Logo/Initials Placeholder -->
+                    <div class="brutal-card bg-white p-6 w-32 h-32 flex items-center justify-center mb-6 mt-4">
+                        <p class="text-5xl font-extrabold headline-font">GP.</p>
+                    </div>
+
+                    <p class="text-5xl font-black headline-font text-black mb-1">10+ YEARS</p>
+                    <p class="text-lg font-semibold border-b-4 border-black pb-4 mb-6 w-full">Experience in HRBP & Strategy</p>
+
+                    <p class="text-3xl font-black headline-font text-blue mb-1">TECH SAVVY</p>
+                    <p class="text-lg font-semibold pb-4">AI, Python & Analytics</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- KEY ACHIEVEMENTS (Lighter Shades) -->
+        <section id="key-achievements" class="mb-16">
+            <h2 class="brutal-section-header text-4xl mb-6">🏆 KEY IMPACT</h2>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Impact 1: Attrition - Light Orange/Peach -->
+                <div class="brutal-card p-6" style="background-color: var(--impact-red-light); color: var(--color-black); border: 3px solid var(--color-black);">
+                    <p class="font-black text-2xl headline-font mb-2">Attrition Reduction</p>
+                    <p class="text-base">Reduced attrition in critical teams by **7–9%** using data-driven interventions.</p>
+                </div>
+
+                <!-- Impact 2: Onboarding - Light Green -->
+                <div class="brutal-card p-6" style="background-color: var(--impact-green-light); color: var(--color-black); border: 3px solid var(--color-black);">
+                    <p class="font-black text-2xl headline-font mb-2">Onboarding Experience</p>
+                    <p class="text-base">Revamped onboarding processes resulting in **15% faster integration** and enhanced new-joiner experience.</p>
+                </div>
+
+                <!-- Impact 3: Engagement - Light Blue -->
+                <div class="brutal-card p-6" style="background-color: var(--impact-blue-light); color: var(--color-black); border: 3px solid var(--color-black);">
+                    <p class="font-black text-2xl headline-font mb-2">Engagement Metrics</p>
+                    <p class="text-base">Utilized data analytics, improving employee engagement scores by **12%** in diverse business units.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI AUTOMATION AND PROJECTS (Light Yellow Background Style) -->
+        <section id="ai-projects" class="brutal-card p-8 md:p-12 mb-16 bg-yellow" style="box-shadow: 8px 8px 0 0 var(--color-black);">
+            <div class="text-center mb-10">
+                <p class="text-xl font-bold mb-2">🔮 Future Ready HR</p>
+                <h2 class="brutal-section-header inline-block border-b-4 pb-2" style="border-color: var(--color-black);">
+                    AI & AUTOMATION PROJECTS
+                </h2>
+                <p class="mt-2 text-lg italic">Leveraging Technology to drive efficiency and actionable insights in Human Resources.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Project 1: Chatbot -->
+                <div class="brutal-card p-6">
+                    <p class="font-black text-2xl headline-font mb-3 text-blue">People.AI Chatbot Initiative</p>
+                    <p class="text-base mb-4">Led a proof-of-concept HR automation initiative by developing **People.AI**, a custom HR chatbot integrated with MS Teams to streamline high-volume employee queries and enhance self-service.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="pill bg-yellow">AI</span>
+                        <span class="pill bg-blue text-white">Chatbot</span>
+                        <span class="pill bg-yellow">MS Teams</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: Reporting -->
+                <div class="brutal-card p-6">
+                    <p class="font-black text-2xl headline-font mb-3 text-blue">Automated HR Reporting</p>
+                    <p class="text-base mb-4">Automated daily HR reporting by creating **Python scripts** in Google Colab via Claude, enabling automatic processing of HR dump reports and generating actionable insights with zero manual effort.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="pill bg-yellow">Python/Colab</span>
+                        <span class="pill bg-blue text-white">Claude AI</span>
+                        <span class="pill bg-yellow">Data Processing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PROFESSIONAL EXPERIENCE (Detailed Timeline) -->
+        <section id="full-experience" class="brutal-card bg-white p-6 md:p-10 mb-16">
+            <h2 class="brutal-section-header text-blue">PROFESSIONAL EXPERIENCE (10+ YEARS)</h2>
+            <div class="space-y-8">
+                
+                <!-- 1. Infinity Learn by Sri Chaitanya (04/2023–Present) -->
+                <div class="experience-item">
+                    <p class="text-xl font-bold">Deputy Manager – HR Business Partner</p>
+                    <p class="text-lg font-medium text-blue">Infinity Learn by Sri Chaitanya | Hyderabad | 04/2023–Present</p>
+                    <p class="mt-1 text-sm italic">HRBP for 800+ employees across Product, Technology, Finance, Marketing, Academics, HR, Content, Customer Success, and Offline Centers.</p>
+                    <ul class="list-disc ml-5 mt-3 text-base space-y-1">
+                        <li>Partnered with CXOs and Delivery Heads to shape people strategy aligned to growth and organizational priorities.</li>
+                        <li>Drove workforce planning, talent health assessments, and future-fit capability building for fast-scaling teams.</li>
+                        <li>Led post-acquisition HR integration covering job architecture, policy harmonization, payroll alignment and culture transition.</li>
+                    </ul>
+                </div>
+
+                <!-- 2. TestVagrant Technologies (04/2021-09/2022) -->
+                <div class="experience-item">
+                    <p class="text-xl font-bold">Senior HR Business Partner</p>
+                    <p class="text-lg font-medium text-blue">TestVagrant Technologies | Bangalore | 04/2021–09/2022</p>
+                    <ul class="list-disc ml-5 mt-3 text-base space-y-1">
+                        <li>Managed hiring, onboarding, performance, R&R, employee relations and engagement.</li>
+                        <li>Designed retention initiatives and strengthened capability and performance culture.</li>
+                    </ul>
+                </div>
+
+                <!-- 3. WorkIndia (08/2019-03/2021) -->
+                <div class="experience-item">
+                    <p class="text-xl font-bold">HR Business Partner</p>
+                    <p class="text-lg font-medium text-blue">WorkIndia | Bangalore | 08/2019–03/2021</p>
+                    <ul class="list-disc ml-5 mt-3 text-base space-y-1">
+                        <li>Managed employee lifecycle, grievances, performance cycles, and policy implementation.</li>
+                        <li>Improved retention and manager enablement programs.</li>
+                    </ul>
+                </div>
+                
+                <!-- 4. Purple Quarter (03/2019-08/2019) -->
+                <div class="experience-item">
+                    <p class="text-xl font-bold">Market Research Analyst - HR</p>
+                    <p class="text-lg font-medium text-blue">Purple Quarter | Bangalore | 03/2019–08/2019</p>
+                    <ul class="list-disc ml-5 mt-3 text-base space-y-1">
+                        <li>Conducted talent mapping and leadership hiring research for technology organisations.</li>
+                    </ul>
+                </div>
+
+                <!-- 5. EMilestones (01/2018-02/2019) -->
+                <div class="experience-item">
+                    <p class="text-xl font-bold">Research Associate</p>
+                    <p class="text-lg font-medium text-blue">EMilestones | Mumbai | 01/2018–02/2019</p>
+                    <ul class="list-disc ml-5 mt-3 text-base space-y-1">
+                        <li>Led end-to-end execution of leadership and executive search mandates.</li>
+                    </ul>
+                </div>
+                
+                <!-- 6. Avalon Global Research (11/2015-11/2018) -->
+                <div class="experience-item">
+                    <p class="text-xl font-bold">Jr. Research Associate</p>
+                    <p class="text-lg font-medium text-blue">Avalon Global Research | Mumbai | 11/2015–11/2018</p>
+                    <ul class="list-disc ml-5 mt-3 text-base space-y-1">
+                        <li>Conducted end-to-end compliance and process investigation for AHFCL's home loan workflow.</li>
+                        <li>Executed primary & secondary research for PwC, including expert interviews to analyse economic conditions.</li>
+                    </ul>
+                </div>
+
+                <!-- 7. Early Career Experience (2011-2015) - Re-added -->
+                <div class="experience-item">
+                    <p class="text-xl font-bold">Early Career Experience</p>
+                    <p class="text-lg font-medium text-blue">Various Internships and Roles | 2011–2015</p>
+                    <ul class="list-disc ml-5 mt-3 text-base space-y-1">
+                        <li>Completed multiple internships and early full-time roles in HR, recruitment, and market research.</li>
+                        <li>Developed strong foundational skills in communication, stakeholder coordination, and data analysis.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CERTIFICATIONS (Standalone Section) -->
+        <section id="certifications" class="pt-8 mb-12">
+            <h2 class="brutal-section-header text-blue">PROFESSIONAL CERTIFICATIONS</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Certifications 1 -->
+                <div class="brutal-card p-4 bg-yellow">
+                    <p class="font-bold text-lg headline-font text-black">POSH & Strategic HR (02/2023)</p>
+                    <p class="text-base font-medium">LawSikho</p>
+                </div>
+                <!-- Certifications 2 -->
+                <div class="brutal-card p-4 bg-yellow">
+                    <p class="font-bold text-lg headline-font text-black">Gen AI, Prompt Engineering & Psychology (11/2025)</p>
+                    <p class="text-base font-medium">Great Learning</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <footer class="pt-8 mb-12">
+            <h2 class="brutal-section-header text-blue">EDUCATION</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Education 1 -->
+                <div class="brutal-card p-4 col-span-2">
+                    <p class="font-bold text-lg headline-font text-blue">MBA, Human Resources (01/2016)</p>
+                    <p class="text-base font-medium">Wigan & Leigh College India (UK Collaboration)</p>
+                </div>
+
+                <!-- Education 2 -->
+                <div class="brutal-card p-4">
+                    <p class="font-bold text-lg headline-font text-blue">Bachelor of Commerce (03/2011)</p>
+                    <p class="text-base font-medium">S N College, Banking & Insurance</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
